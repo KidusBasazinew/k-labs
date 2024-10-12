@@ -3,7 +3,7 @@ import { Input } from "./ui/input";
 import { Label } from "@radix-ui/react-label";
 import { cn } from "../lib/utils";
 import { Textarea } from "./ui/textarea";
-import { ChevronsDown, Icon } from "lucide-react";
+import { ChevronsDown } from "lucide-react";
 
 import contact from "../../public/contact-us.png";
 
