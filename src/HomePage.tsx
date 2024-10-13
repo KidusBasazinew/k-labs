@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import MaxWidthWrapper from "./components/MaxWidthWrapper";
 import Navbar from "./components/Navbar";
 import Contuct from "./components/Contuct";
@@ -22,6 +24,20 @@ import letterImg from "../public/letter.png";
 import { Button } from "./components/ui/button";
 import { Link } from "react-router-dom";
 import { ProductList } from "./components/lists/ProjectList";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5 * index,
+    },
+  }),
+};
 
 function App() {
   return (
@@ -83,12 +99,20 @@ function App() {
             <div className="mt-6 flex items-center w-full">
               <div className="w-full grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-10 lg:gap-x-8">
                 {ServiceLists.map((item, index) => (
-                  <ServicesCard
+                  <motion.div
                     key={index}
-                    heading={item.name}
-                    description={item.paragraph}
-                    icon={item.icon}
-                  />
+                    variants={fadeInAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    custom={index}
+                  >
+                    <ServicesCard
+                      heading={item.name}
+                      description={item.paragraph}
+                      icon={item.icon}
+                    />
+                  </motion.div>
                 ))}
               </div>
             </div>
