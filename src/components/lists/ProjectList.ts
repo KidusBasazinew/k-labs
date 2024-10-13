@@ -6,42 +6,42 @@ export interface Product {
 
 export const ProductList: Product[] = [
   {
-    image: "../../public/Travel Agency Landing Page.jpg",
+    image: "../../public/TravelAgencyLandingPage.jpg",
     websiteUrl: "fakewebsite1.com",
     price: 120,
   },
   {
-    image: "../../public/Digital Marketing Agency_ landing page design.jpg",
+    image: "../../public/DigitalMarketingAgencylandingpagedesign.jpg",
     websiteUrl: "fakewebsite1.com",
     price: 1000,
   },
   {
-    image: "../../Marketing Agency Website.jpg",
+    image: "../../MarketingAgencyWebsite.jpg",
     websiteUrl: "fakewebsite2.com",
     price: 2000,
   },
   {
-    image: "../../public/Adital- Digital Agency Website.jpg",
+    image: "../../public/AditalDigitalAgencyWebsite.jpg",
     websiteUrl: "fakewebsite3.com",
     price: 1500,
   },
   {
-    image: "../../public/Travel Agency Landing Page.jpg",
+    image: "../../public/TravelAgencyLandingPage.jpg",
     websiteUrl: "fakewebsite1.com",
     price: 120,
   },
   {
-    image: "../../public/Digital Marketing Agency_ landing page design.jpg",
+    image: "../../public/DigitalMarketingAgencylandingpagedesign.jpg",
     websiteUrl: "fakewebsite1.com",
     price: 1000,
   },
   {
-    image: "../../Marketing Agency Website.jpg",
+    image: "../../MarketingAgencyWebsite.jpg",
     websiteUrl: "fakewebsite2.com",
     price: 2000,
   },
   {
-    image: "../../public/Adital- Digital Agency Website.jpg",
+    image: "../../public/AditalDigitalAgencyWebsite.jpg",
     websiteUrl: "fakewebsite3.com",
     price: 1500,
   },
