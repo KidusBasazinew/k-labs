@@ -20,6 +20,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { useState } from "react";
+import SuccessCard from "./SeccessCard";
 
 const schema = z.object({
   fullName: z
@@ -44,20 +45,26 @@ const QuoteForm = () => {
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    //We are going to chage this with animation
-    alert("Send successfully!");
-    reset();
+  const [position, setPosition] = useState("");
+
+  const [isCardVisible, setIsCardVisible] = useState<boolean>(false);
+
+  const hideSuccessCard = () => {
+    setIsCardVisible(false);
   };
 
-  const [position, setPosition] = useState("");
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+    //We are going to chage this in to animation
+    setIsCardVisible(true);
+    reset();
+  };
 
   return (
     <div className="container relative flex items-center justify-between lg:px-0 pb-10">
       <div className="mx-auto flex w-full flex-col justify-between space-y-6 sm:w-[350px]">
         <div className="flex flex-col items-center space-y-2 text-center">
-          {/* <Icon.></> */}
+          <SuccessCard isVisible={isCardVisible} onClose={hideSuccessCard} />
           <h1 className="text-2xl sm:font-semibold tracking-tightrelative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 sm:text-2xl md:text-6xl lg:text-5xl">
             Write us your request
           </h1>
