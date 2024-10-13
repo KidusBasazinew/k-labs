@@ -13,15 +13,17 @@ const Navbar = () => {
           </Link>
 
           <div className="h-full flex items-center space-x-4">
-            <Link
-              to="/"
-              className={buttonVariants({
-                size: "md",
-                variant: "ghost",
-              })}
-            >
-              Services
-            </Link>
+            <div className="hidden sm:block">
+              <Link
+                to="/"
+                className={buttonVariants({
+                  size: "md",
+                  variant: "ghost",
+                })}
+              >
+                Services
+              </Link>
+            </div>
 
             <Link
               to="../projects"
@@ -32,18 +34,19 @@ const Navbar = () => {
             >
               Projects ✨
             </Link>
+            <div className="hidden sm:block">
+              <Link
+                to="#contact"
+                className={buttonVariants({
+                  size: "md",
+                  variant: "ghost",
+                })}
+              >
+                Contact
+              </Link>
+            </div>
 
-            <Link
-              to="#contact"
-              className={buttonVariants({
-                size: "md",
-                variant: "ghost",
-              })}
-            >
-              Contact
-            </Link>
-
-            <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
+            <div className="h-8 w-px bg-zinc-200 block" />
 
             <Link
               to="../getstart"
