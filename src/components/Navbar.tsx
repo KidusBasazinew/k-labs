@@ -34,7 +34,7 @@ const Navbar = () => {
             >
               Projects ✨
             </Link>
-            <div className="block">
+            <div className="block sm:block">
               <Link
                 to="#contact"
                 className={buttonVariants({
@@ -52,7 +52,7 @@ const Navbar = () => {
               to="../getstart"
               className={buttonVariants({
                 size: "sm",
-                className: "hidden sm:flex items-center gap-1",
+                className: "flex items-center gap-1",
               })}
             >
               Let's talk
