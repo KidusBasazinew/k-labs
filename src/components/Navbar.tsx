@@ -34,7 +34,7 @@ const Navbar = () => {
             >
               Projects ✨
             </Link>
-            <div className="hidden sm:block">
+            <div className="block">
               <Link
                 to="#contact"
                 className={buttonVariants({
