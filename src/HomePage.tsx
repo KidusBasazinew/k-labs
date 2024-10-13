@@ -34,7 +34,7 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.5 * index,
+      delay: 0.2 * index,
     },
   }),
 };
@@ -46,8 +46,8 @@ function App() {
       <MaxWidthWrapper>
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Expert Web Development Solutions for{" "}
-            <span className="text-green-600">Growing Businesses</span>
+            Expert Web Development Solutions for
+            <span className="text-green-600"> Growing Businesses</span>
           </h1>
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
             Offering custom, responsive web development solutions to help your
@@ -80,12 +80,17 @@ function App() {
             <div className="mt-6 flex items-center w-full">
               <div className="w-full grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-10 lg:gap-x-8">
                 {ProductList.slice(0, 4).map((list, index) => (
-                  <ProductsCard
+                  <motion.div
                     key={index}
-                    image={list.image}
-                    websiteUrl={list.websiteUrl}
-                    price={list.price}
-                  />
+                    whileHover={{ rotate: 5, scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <ProductsCard
+                      image={list.image}
+                      websiteUrl={list.websiteUrl}
+                      price={list.price}
+                    />
+                  </motion.div>
                 ))}
               </div>
             </div>
