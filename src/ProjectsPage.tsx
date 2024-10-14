@@ -27,10 +27,13 @@ const ProjectsPage = () => {
                 Our Projects
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                We prioritize personalized solutions, combining creativity and
-                technology to deliver
-                <span className="font-semibold"> impactful results </span>
-                that drive growth and exceed client expectations.
+                Welcome to our Projects page, where we proudly present a
+                selection of our
+                <span className="font-semibold"> recent work. </span>Each
+                project represents our commitment to excellence, creativity, and
+                innovation in web development and design. Explore our diverse
+                portfolio that highlights our expertise across various
+                categories,
               </p>
             </div>
             <div className="max-w-2xl px-4 lg:max-w-4xl lg:px-0">
