@@ -89,6 +89,8 @@ function App() {
                       image={list.image}
                       websiteUrl={list.websiteUrl}
                       price={list.price}
+                      description={list.description}
+                      dateDeliverd={list.dateDeliverd}
                     />
                   </motion.div>
                 ))}
