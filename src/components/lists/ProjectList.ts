@@ -4,6 +4,7 @@ export interface Product {
   price: number;
   description: string;
   dateDeliverd: string;
+  category: string;
 }
 
 export const ProductList: Product[] = [
@@ -13,6 +14,7 @@ export const ProductList: Product[] = [
     price: 120,
     description: "description about website number 1",
     dateDeliverd: "Joined November 2023",
+    category: "All",
   },
   {
     image: "/DigitalMarketingAgencylandingpagedesign.jpg",
@@ -20,6 +22,7 @@ export const ProductList: Product[] = [
     price: 1000,
     description: "description about website number 2",
     dateDeliverd: "Joined May 2022",
+    category: "Website",
   },
   {
     image: "/MarketingAgencyWebsite.jpg",
@@ -27,6 +30,7 @@ export const ProductList: Product[] = [
     price: 2000,
     description: "description about website number 3",
     dateDeliverd: "Joined June 2023",
+    category: "All",
   },
   {
     image: "/AditalDigitalAgencyWebsite.jpg",
@@ -34,6 +38,7 @@ export const ProductList: Product[] = [
     price: 1500,
     description: "description about website number 4",
     dateDeliverd: "Joined Julay 2024",
+    category: "Website",
   },
   {
     image: "/TravelAgencyLandingPage.jpg",
@@ -41,10 +46,12 @@ export const ProductList: Product[] = [
     price: 120,
     description: "description about website number 5",
     dateDeliverd: "Joined Augest 2024",
+    category: "Logo",
   },
   {
     image: "/DigitalMarketingAgencylandingpagedesign.jpg",
     websiteUrl: "fakewebsite1.com",
+    category: "Digital Marketing",
     price: 1000,
     description: "description about website number 6",
     dateDeliverd: "Joined December 2020",
@@ -55,6 +62,7 @@ export const ProductList: Product[] = [
     price: 2000,
     description: "description about website number 7",
     dateDeliverd: "Joined December 2021",
+    category: "Motion Graphics",
   },
   {
     image: "/AditalDigitalAgencyWebsite.jpg",
@@ -62,5 +70,6 @@ export const ProductList: Product[] = [
     price: 1500,
     description: "description about website number 8",
     dateDeliverd: "Joined Augest 2022",
+    category: "Logo",
   },
 ];

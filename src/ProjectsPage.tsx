@@ -3,8 +3,19 @@ import MaxWidthWrapper from "./components/MaxWidthWrapper";
 import ProductsCard from "./components/ProductsCard";
 
 import { ProductList } from "./components/lists/ProjectList";
+import { Button } from "./components/ui/button";
+import { useState } from "react";
 
 const ProjectsPage = () => {
+  // State to keep track of the selected category
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // Filter products based on selected category
+  const filteredProducts = ProductList.filter(
+    (product) =>
+      selectedCategory === "All" || product.category === selectedCategory
+  );
+
   return (
     <>
       <Navbar />
@@ -23,12 +34,37 @@ const ProjectsPage = () => {
               </p>
             </div>
             <div className="max-w-2xl px-4 lg:max-w-4xl lg:px-0">
-              <ul className="flex justify-center items-center gap-x-3">
-                <li>All</li>
-                <li>websites</li>
-                <li>logos</li>
-                <li>digital markating</li>
-                <li>websites</li>
+              <ul className="w-full grid grid-cols-2 gap-x-1 gap-y-1 sm:gap-x-4 md:grid-cols-3 md:gap-y-2 lg:gap-x-1">
+                <Button
+                  onClick={() => setSelectedCategory("All")}
+                  className="bg-white text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
+                >
+                  All
+                </Button>
+                <Button
+                  onClick={() => setSelectedCategory("Website")}
+                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
+                >
+                  Websites
+                </Button>
+                <Button
+                  onClick={() => setSelectedCategory("Logo")}
+                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
+                >
+                  Logo
+                </Button>
+                <Button
+                  onClick={() => setSelectedCategory("Digital Marketing")}
+                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
+                >
+                  Digital Marketing
+                </Button>
+                <Button
+                  onClick={() => setSelectedCategory("Motion Graphics")}
+                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
+                >
+                  Motion Graphics
+                </Button>
               </ul>
             </div>
           </div>
@@ -36,7 +72,7 @@ const ProjectsPage = () => {
           <div className="relative">
             <div className="mt-6 flex items-center w-full">
               <div className="w-full grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-10 lg:gap-x-8">
-                {ProductList.map((list, index) => (
+                {filteredProducts.map((list, index) => (
                   <ProductsCard
                     key={index}
                     image={list.image}
