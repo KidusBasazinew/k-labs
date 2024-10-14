@@ -40,7 +40,7 @@ export const ProductList: Product[] = [
     websiteUrl: "fakewebsite1.com",
     price: 120,
     description: "description about website number 5",
-    dateDeliverd: "Joined December 2024",
+    dateDeliverd: "Joined Augest 2024",
   },
   {
     image: "/DigitalMarketingAgencylandingpagedesign.jpg",
