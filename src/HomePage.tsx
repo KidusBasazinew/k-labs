@@ -96,7 +96,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="py-12">
+        <section id="services" className="py-12">
           <h1 className="text-2xl text-center py-4 font-bold text-gray-900 sm:text-3xl">
             Services we can help with
           </h1>
@@ -216,7 +216,9 @@ function App() {
             </div>
           </div>
         </div>
-        <Contuct />
+        <div id="contact">
+          <Contuct />
+        </div>
         <footer className="mt-20 mx-auto w-full max-w-screen-xl px-2.5 md:px-20">
           <div className="border-t border-gray-200">
             <div className="pb-8 pt-16">

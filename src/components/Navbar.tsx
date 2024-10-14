@@ -14,15 +14,15 @@ const Navbar = () => {
 
           <div className="h-full flex items-center space-x-4">
             <div className="hidden sm:block">
-              <Link
-                to="/"
+              <a
+                href="#services"
                 className={buttonVariants({
                   size: "md",
                   variant: "ghost",
                 })}
               >
                 Services
-              </Link>
+              </a>
             </div>
 
             <Link
@@ -35,15 +35,15 @@ const Navbar = () => {
               Projects ✨
             </Link>
             <div className="hidden sm:block">
-              <Link
-                to="#contact"
+              <a
+                href="#contact"
                 className={buttonVariants({
                   size: "md",
                   variant: "ghost",
                 })}
               >
                 Contact
-              </Link>
+              </a>
             </div>
 
             <div className="h-8 w-px bg-zinc-200 block" />
