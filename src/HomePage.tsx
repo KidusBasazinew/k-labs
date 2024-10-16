@@ -30,6 +30,7 @@ const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
     y: 100,
+    backgroundColor: "#fff",
   },
   animate: (index: number) => ({
     opacity: 1,
@@ -85,6 +86,7 @@ function App() {
                     key={index}
                     whileHover={{ rotate: 5, scale: 1.1 }}
                     transition={{ duration: 0.5 }}
+                    style={{ zIndex: "10" }}
                   >
                     <ProductsCard
                       image={list.image}
@@ -110,10 +112,11 @@ function App() {
                   <motion.div
                     key={index}
                     variants={fadeInAnimationVariants}
-                    initial="initial"
+                    initial={"initial"}
                     whileInView="animate"
                     viewport={{ once: true }}
                     custom={index}
+                    whileHover={{ backgroundColor: "#f4f4f5" }}
                   >
                     <ServicesCard
                       heading={item.name}

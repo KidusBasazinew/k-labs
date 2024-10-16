@@ -10,7 +10,7 @@ const ServicesCard = ({ heading, description, icon }: Props) => {
   return (
     <Link
       to="../getstart"
-      className="h-full w-full cursor-pointer  rounded-lg  group/main visible animate-in fade-in-5 hover:bg-muted"
+      className="h-full w-full cursor-pointer  rounded-lg  group/main visible animate-in fade-in-5"
     >
       <div className="flex flex-col p-5 gap-y-2w-full ">
         <div className="w-20 group relative overflow-hidden rounded-xl float-left">
