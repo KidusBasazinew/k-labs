@@ -24,6 +24,7 @@ import letterImg from "../public/letter.png";
 import { Button } from "./components/ui/button";
 import { Link } from "react-router-dom";
 import { ProductList } from "./components/lists/ProjectList";
+import { Blog } from "./components/Blog";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -281,6 +282,7 @@ function App() {
           </div>
         </footer>
       </MaxWidthWrapper>
+      <Blog />
     </>
   );
 }

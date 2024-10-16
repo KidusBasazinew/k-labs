@@ -36,43 +36,33 @@ const ProjectsPage = () => {
                 categories,
               </p>
             </div>
-            <div className="max-w-2xl px-4 lg:max-w-4xl lg:px-0">
+            <div className="max-w-2xl px-4 mt-10 lg:max-w-4xl lg:px-0">
               <ul className="w-full grid grid-cols-2 gap-x-1 gap-y-1 sm:gap-x-4 md:grid-cols-3 md:gap-y-2 lg:gap-x-1">
-                <Button
-                  onClick={() => setSelectedCategory("All")}
-                  className="bg-white text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
-                >
-                  All
-                </Button>
-                <Button
-                  onClick={() => setSelectedCategory("Website")}
-                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
-                >
-                  Websites
-                </Button>
-                <Button
-                  onClick={() => setSelectedCategory("Logo")}
-                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
-                >
-                  Logo
-                </Button>
-                <Button
-                  onClick={() => setSelectedCategory("Digital Marketing")}
-                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
-                >
-                  Digital Marketing
-                </Button>
-                <Button
-                  onClick={() => setSelectedCategory("Motion Graphics")}
-                  className="bg-white  text-foreground shadow-none hover:bg-accent active:bg-muted-foreground active:text-white"
-                >
-                  Motion Graphics
-                </Button>
+                {[
+                  "All",
+                  "Website",
+                  "Logo",
+                  "Digital Marketing",
+                  "Motion Graphics",
+                ].map((category) => (
+                  <Button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`bg-white text-foreground shadow-none hover:bg-accent hover:text-foreground active:bg-muted-foreground 
+                      ${
+                        selectedCategory === category
+                          ? "bg-primary text-white"
+                          : ""
+                      }`}
+                  >
+                    {category}
+                  </Button>
+                ))}
               </ul>
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative mt-20 lg:10">
             <div className="mt-6 flex items-center w-full">
               <div className="w-full grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-10 lg:gap-x-8">
                 {filteredProducts.map((list, index) => (
