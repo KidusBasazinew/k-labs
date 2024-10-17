@@ -43,7 +43,7 @@ const ProductsCard = ({
               </div>
             </a>
           </HoverCardTrigger>
-          <HoverCardContent className="absolute bottom-20 left-0 right-10">
+          <HoverCardContent className="z-50 absolute bottom-20 left-0 right-10 rotate-0">
             <div className="flex justify-between space-x-4">
               <FileCode2 className="ml-3 h-10 w-10 " />
               <div className="space-y-1">

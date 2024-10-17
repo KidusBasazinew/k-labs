@@ -84,7 +84,8 @@ function App() {
                 {ProductList.slice(0, 4).map((list, index) => (
                   <motion.div
                     key={index}
-                    whileHover={{ rotate: 5, scale: 1.1 }}
+                    initial={{ zIndex: "10" }}
+                    whileHover={{ rotate: 5, scale: 1.1, zIndex: 100 }}
                     transition={{ duration: 0.5 }}
                     style={{ zIndex: "10" }}
                   >
