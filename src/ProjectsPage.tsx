@@ -1,17 +1,15 @@
 import Navbar from "./components/Navbar";
 import MaxWidthWrapper from "./components/MaxWidthWrapper";
-import ProductsCard from "./components/ProductsCard";
+import ProjectsCard from "./components/ProjectsCard";
 
 import { ProductList } from "./components/lists/ProjectList";
 import { Button } from "./components/ui/button";
 import { useState } from "react";
 
 const ProjectsPage = () => {
-  // State to keep track of the selected category
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Filter products based on selected category
-  const filteredProducts = ProductList.filter(
+  const filteredProjects = ProductList.filter(
     (product) =>
       selectedCategory === "All" || product.category === selectedCategory
   );
@@ -65,8 +63,8 @@ const ProjectsPage = () => {
           <div className="relative mt-20 lg:10">
             <div className="mt-6 flex items-center w-full">
               <div className="w-full grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-10 lg:gap-x-8">
-                {filteredProducts.map((list, index) => (
-                  <ProductsCard
+                {filteredProjects.map((list, index) => (
+                  <ProjectsCard
                     key={index}
                     image={list.image}
                     websiteUrl={list.websiteUrl}

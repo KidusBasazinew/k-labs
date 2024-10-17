@@ -22,7 +22,10 @@ export function Blog() {
   return (
     <Sheet>
       <SheetTrigger asChild className="fixed bottom-10 right-0 mr-10">
-        <img src={MessageIcon} className="z-50 w-24 h-24 cursor-pointer" />
+        <img
+          src={MessageIcon}
+          className="z-50 w-16 h-16 sm:w-24 sm:h-24 cursor-pointer"
+        />
       </SheetTrigger>
       <SheetContent className="z-[10000]">
         <SheetHeader>

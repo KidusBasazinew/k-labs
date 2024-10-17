@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Contuct from "./components/Contuct";
 
 import { ArrowRight } from "lucide-react";
-import ProductsCard from "./components/ProductsCard";
+import ProjectsCard from "./components/ProjectsCard";
 
 import { ServiceLists } from "./components/lists/ServicesLists";
 import ServicesCard from "./components/ServicesCard";
@@ -89,7 +89,7 @@ function App() {
                     transition={{ duration: 0.5 }}
                     style={{ zIndex: "10" }}
                   >
-                    <ProductsCard
+                    <ProjectsCard
                       image={list.image}
                       websiteUrl={list.websiteUrl}
                       price={list.price}

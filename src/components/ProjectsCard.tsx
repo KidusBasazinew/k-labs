@@ -1,8 +1,4 @@
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "../components/ui/hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
 import { CalendarDays } from "lucide-react";
 import { FileCode2 } from "lucide-react";
@@ -14,7 +10,7 @@ interface Props {
   description: string;
   dateDeliverd: string;
 }
-const ProductsCard = ({
+const ProjectsCard = ({
   image,
   websiteUrl,
   price,
@@ -71,4 +67,4 @@ const ProductsCard = ({
   );
 };
 
-export default ProductsCard;
+export default ProjectsCard;
