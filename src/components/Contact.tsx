@@ -23,7 +23,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const Contuct = () => {
+const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -40,7 +40,6 @@ const Contuct = () => {
     >
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
         <div className="flex flex-col items-center space-y-2 text-center">
-          {/* <Icons.logo className="h-20 w-20" /> */}
           <h1 className="text-2xl sm:font-semibold tracking-tightrelative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 sm:text-2xl md:text-6xl lg:text-5xl">
             Contact us here
           </h1>
@@ -107,4 +106,4 @@ const Contuct = () => {
   );
 };
 
-export default Contuct;
+export default Contact;

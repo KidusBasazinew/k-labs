@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import MaxWidthWrapper from "./components/MaxWidthWrapper";
 import Navbar from "./components/Navbar";
-import Contuct from "./components/Contuct";
+import Contact from "./components/Contact";
 
 import { ArrowRight } from "lucide-react";
 import ProjectsCard from "./components/ProjectsCard";
@@ -136,7 +136,7 @@ function App() {
               <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
                 What makes us defferent
               </h1>
-              <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
+              <p className="text-left mt-8 text-lg lg:pr-10 max-w-prose lg:text-left text-balance md:text-wrap">
                 We prioritize personalized solutions, combining creativity and
                 technology to deliver
                 <span className="font-semibold"> impactful results </span>
@@ -224,7 +224,7 @@ function App() {
           </div>
         </div>
         <div id="contact">
-          <Contuct />
+          <Contact />
         </div>
         <footer className="mt-20 mx-auto w-full max-w-screen-xl px-2.5 md:px-20">
           <div className="border-t border-gray-200">
