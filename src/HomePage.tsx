@@ -60,7 +60,7 @@ function App() {
               <Link to="/getstart">Get start →</Link>
             </Button>
             <Button className="bg-muted text-foreground hover:text-white">
-              Contact us
+              <a href="#contact">Contact us</a>
             </Button>
           </div>
         </div>
